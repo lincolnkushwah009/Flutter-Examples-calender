@@ -20,6 +20,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'cards.dart';
 
 import 'example.dart';
 
@@ -90,6 +91,18 @@ class _MyHomePageState extends State<MyHomePage> {
               child:
               new Text('Click here', style: TextStyle(color: Colors.white)),
             ),
+
+            RaisedButton(
+              onPressed: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Cards()),
+                );
+              },
+              child: Text(
+                "Card"
+              ),
+            )
           ],
         ),
       ),
