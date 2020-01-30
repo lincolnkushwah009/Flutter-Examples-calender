@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 
 class Track extends StatelessWidget {
+  final List<Widget> cards = List<Widget>.generate(4, (i)=>new OrderInfo());
+
 
 
   @override
@@ -10,103 +12,123 @@ class Track extends StatelessWidget {
 
     return new Scaffold(
 
-     body: Column(
-       crossAxisAlignment: CrossAxisAlignment.center,
-       mainAxisSize: MainAxisSize.min,
-       children: [
-
-         Padding(
-           padding: const EdgeInsets.fromLTRB(20,50,20,0),
-           child: new Card(
-             child: Column(
-               children: <Widget>[
-                 Padding(
-                   padding: const EdgeInsets.all(8.0),
-                   child: Row(
-                     mainAxisAlignment: MainAxisAlignment.spaceAround,
-                     children: <Widget>[
-                       Text("Transaction ID"),
-                       Text("34321324354245")
-                     ],
-                   ),
-                 ),
-
-                 Padding(
-                   padding: const EdgeInsets.fromLTRB(20,0,0,0),
-                   child: Container(
-                       child: _buildDashWidget()
-                   ),
-                 ),
-                 Padding(
-                   padding: const EdgeInsets.all(8.0),
-                   child: Row(
-                     mainAxisAlignment: MainAxisAlignment.spaceAround,
-                     children: <Widget>[
-                       Text("Order Date"),
-                       Text("12-01-2020")
-                     ],
-                   ),
-                 ),
-                 Padding(
-                   padding: const EdgeInsets.fromLTRB(20,0,0,0),
-                   child: Container(
-                       child: _buildDashWidget()
-                   ),
-                 ),
-                 Padding(
-                   padding: const EdgeInsets.all(8.0),
-                   child: Row(
-                     mainAxisAlignment: MainAxisAlignment.spaceAround,
-                     children: <Widget>[
-                       Text("Delivery"),
-                       Text("20-01-2020")
-                     ],
-                   ),
-                 ),
-
-                 Padding(
-                   padding: const EdgeInsets.fromLTRB(20,0,0,0),
-                   child: Container(
-                       child: _buildDashWidget()
-                   ),
-                 ),
-
-
-                 Padding(
-                   padding: const EdgeInsets.all(8.0),
-                   child: Row(
-                     mainAxisAlignment: MainAxisAlignment.spaceAround,
-                     children: <Widget>[
-                       Text("Status Order"),
-                       Text("Out For Delivery")
-                     ],
-                   ),
-                 ),
-
-                 RotationTransition(
-                   turns: new AlwaysStoppedAnimation(180 / 360),
-                   child: ClipPath(
-                     clipper: MyCustomClipper(),
-                     child: Container(
-                       height: 6,
-                       width: 800,
-                       color: Colors.red,
-
-                     ),
-                   ),
-                 )
-
-
-
-               ],
-             ),
-           ),
+     body: Container(
+         child: new ListView(
+           children: cards,
          )
-       ],
      ),
     );
   }
 }
+
+
+
+
+
+class OrderInfo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisSize: MainAxisSize.min,
+      children: [
+
+        Padding(
+          padding: const EdgeInsets.fromLTRB(20,20,20,0),
+          child: new Card(
+            child: Column(
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: <Widget>[
+                      Text("Transaction ID"),
+                      Text("34321324354245")
+                    ],
+                  ),
+                ),
+
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(20,0,0,0),
+                  child: Container(
+                      child: _buildDashWidget()
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: <Widget>[
+                      Text("Order Date"),
+                      Text("12-01-2020")
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(20,0,0,0),
+                  child: Container(
+                      child: _buildDashWidget()
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: <Widget>[
+                      Text("Delivery"),
+                      Text("20-01-2020")
+                    ],
+                  ),
+                ),
+
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(20,0,0,0),
+                  child: Container(
+                      child: _buildDashWidget()
+                  ),
+                ),
+
+
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: <Widget>[
+                      Text("Status Order"),
+                      Text("Out For Delivery")
+                    ],
+                  ),
+                ),
+
+                RotationTransition(
+                  turns: new AlwaysStoppedAnimation(180 / 360),
+                  child: ClipPath(
+                    clipper: MyCustomClipper(),
+                    child: Container(
+                      height: 6,
+                      width: 800,
+                      color: Colors.red,
+
+                    ),
+                  ),
+                )
+
+
+
+              ],
+            ),
+          ),
+        )
+      ],
+    );
+  }
+}
+
+
+
+
+
 
 
 
