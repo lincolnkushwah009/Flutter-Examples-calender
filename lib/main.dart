@@ -18,6 +18,7 @@
 
 
 
+import 'package:calender_check/track.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'cards.dart';
@@ -101,6 +102,17 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: Text(
                 "Card"
+              ),
+            ),
+            RaisedButton(color: Colors.red,
+              onPressed: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Track()),
+                );
+              },
+              child: Text(
+                  "Track order"
               ),
             )
           ],

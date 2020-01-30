@@ -25,47 +25,57 @@ class _CardsState extends State<Cards> {
               )),
             ),
             bottom: TabBar(
+              labelColor: Colors.red,
+              unselectedLabelColor: Colors.grey,
               tabs: [
                 Tab(text: 'Invoice'),
-                Tab(text: 'Transation History 2'),
+                Tab(text: 'Transation History'),
               ],
             ),
           ),
           body: TabBarView(
+
             children: [
               FirstScreen(),
               SecondScreen(),
 
             ],
           ),
-          bottomSheet:   Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
-              width: 400.0,
-              child: new RaisedButton(
-                onPressed: () {
+          bottomSheet:Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
 
-                },
-                child: new Text("Buy",
-                  style: TextStyle(color: Colors.white),
-                  textAlign: TextAlign.center  ,
+            children: <Widget>[
+              Container(
+//              alignment: Alignment.bottomLeft,
+                height: 50,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.red
                 ),
-                color: new Color.fromRGBO(44, 40, 41, 1),
-                disabledColor: Colors.grey,
-                shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),
+              padding: const EdgeInsets.fromLTRB(10,10,10,10),
+
+
+                child:Text('Total Outstanding\n 1000',style: TextStyle(color: Colors.white),),
               ),
-            ),
+             Container(
+               height: 50,
+               decoration: BoxDecoration(
+                 borderRadius: BorderRadius.circular(10),
+                 color: Colors.black,
+               ),
+               child: FlatButton(
+                 child: Text("Pay",style: TextStyle(color: Colors.red),),
+               ),
+             ),
+            ],
           ),
-        ),
+
+
+         ),
       ),
     );
   }
 }
-
-
-
-
-
 
 class FirstScreen extends StatelessWidget {
   final List<Widget> cards = List<Widget>.generate(8, (i)=>new mycard());
@@ -75,11 +85,14 @@ class FirstScreen extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
-          body:   new Container(
-              child: new ListView(
-                children: cards,
-              )
+          body:   Padding(
+            padding: const EdgeInsets.fromLTRB(0,0,0,50),
+            child: new Container(
+                child: new ListView(
+                  children: cards,
+                )
 
+            ),
           )
         )
     );
@@ -103,6 +116,21 @@ class _SecondScreenState extends State<SecondScreen> {
                   padding: const EdgeInsets.fromLTRB(8, 20, 8, 0),
                   child:Column(
                     children: <Widget>[
+                      Card(
+                        child: ListTile(
+                          title: Text(" Booster Changes",style: TextStyle(fontWeight: FontWeight.bold),),
+                          trailing: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Column(
+                              children: <Widget>[
+                                Text("10:49 PM",style: TextStyle(color: Colors.grey),),
+                                Text("Completed",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.red),),
+                              ],
+                            ),
+                          ),
+
+                        ),
+                      )
 
                     ],
                   )
