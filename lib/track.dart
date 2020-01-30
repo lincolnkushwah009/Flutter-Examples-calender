@@ -83,13 +83,16 @@ class Track extends StatelessWidget {
                    ),
                  ),
 
-                 ClipPath(
-                   clipper: MyCustomClipper(),
-                   child: Container(
-                     height: 20,
-                     width: 800,
-                     color: Colors.red,
+                 RotationTransition(
+                   turns: new AlwaysStoppedAnimation(180 / 360),
+                   child: ClipPath(
+                     clipper: MyCustomClipper(),
+                     child: Container(
+                       height: 6,
+                       width: 800,
+                       color: Colors.red,
 
+                     ),
                    ),
                  )
 
@@ -115,11 +118,13 @@ class MyCustomClipper extends CustomClipper<Path> {
     path.lineTo(0, size.height);
     var curXPos = 0.0;
     var curYPos = size.height;
-    var increment = size.width / 10;
+    var increment = size.width / 40;
     while (curXPos < size.width) {
       curXPos += increment;
-      path.arcToPoint(Offset(curXPos, curYPos), radius: Radius.circular(5));
+      curYPos = curYPos == size.height ? size.height - 5 : size.height;
+      path.lineTo(curXPos, curYPos);
     }
+    path.lineTo(size.width, 0);
     path.lineTo(size.width, 0);
     return path;
   }
@@ -128,6 +133,7 @@ class MyCustomClipper extends CustomClipper<Path> {
   bool shouldReclip(CustomClipper oldClipper) {
     return false;
   }
+
 
 
 
