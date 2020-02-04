@@ -51,9 +51,13 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   void _showcontent() {
-    showDialog<Null>(
+
+
+
+    showDialog<Null>
+      (barrierDismissible: false,
+
       context: context,
-      barrierDismissible: false, // user must tap button!
       builder: (BuildContext context) {
         return ClipRRect(
 
@@ -61,12 +65,80 @@ class _MyHomePageState extends State<MyHomePage> {
             Radius.circular(5),
           ),
           child: AlertDialog(
+            backgroundColor: Colors.transparent,
             actions: <Widget>[
-              Container(
-                height: 400,
-                width: 300,
-                child: CalendarPage2(),
-              )
+              ClipRRect(
+                borderRadius: BorderRadius.all(Radius.circular(15)),
+
+
+                child: Container(
+                  color: Colors.white,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.all(Radius.circular(15)),
+                    child: Column(
+
+                      children: <Widget>[
+
+
+                        Container(
+                          alignment: Alignment.center,
+                          color: Colors.red,
+                          child: Text("Delivery Date :2020-02-05",style: TextStyle(color: Colors.white,fontSize: 18),),
+                          height: 30,
+                          width: 400,
+                        ),
+                        SizedBox(height: 10),
+
+                        Text("Select Preffered Delivery Date",style: TextStyle(color: Colors.grey,fontSize: 18),),
+                        SizedBox(height: 10),
+
+                        ClipRRect(
+                          borderRadius: BorderRadius.all(Radius.circular(50)),
+                          child: Container(
+                            alignment: Alignment.center,
+                            height: 20,
+                            width: 100,
+                            color: Colors.red,
+                            child: Text("2020-02-05",style: TextStyle(fontSize: 16,color: Colors.white),),
+                          ),
+                        ),
+                        SizedBox(height: 10),
+
+                        Container(
+                          height: 300,
+                          width: 300,
+                          child: CalendarPage2(),
+                        ),
+
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: <Widget>[
+                            RaisedButton(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: new BorderRadius.circular(18.0),
+                              ),
+                              onPressed: (){},
+                              child: Text("Skip"),
+                            ),
+                            RaisedButton(
+                              color: Colors.red,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: new BorderRadius.circular(18.0),
+                              ),
+                              onPressed: (){},
+                              child: Text("Confirm"),
+                            )
+                          ],
+                        ),
+                        SizedBox(height: 5,)
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+
+
+
             ],
           ),
         );
@@ -85,9 +157,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: new Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            new Text(
-              'Push the button to show a Dialog:',
-            ),
+
             new RaisedButton(onPressed: _showcontent, color: Colors.blueAccent,
               child:
               new Text('Click here', style: TextStyle(color: Colors.white)),
