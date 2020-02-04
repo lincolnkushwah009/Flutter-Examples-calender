@@ -89,7 +89,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                         SizedBox(height: 10),
 
-                        Text("Select Preffered Delivery Date",style: TextStyle(color: Colors.grey,fontSize: 18),),
+                        Text("Select Preferred Delivery Date",style: TextStyle(color: Colors.grey,fontSize: 18),),
                         SizedBox(height: 10),
 
                         ClipRRect(
