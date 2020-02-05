@@ -1,24 +1,6 @@
-//import 'package:calender_check/example.dart';
-//import 'package:flutter/material.dart';
-//
-//void main() {
-//  runApp(new MaterialApp(
-//    debugShowCheckedModeBanner: false,
-//    theme: new ThemeData(
-//      primaryColor: const Color(0xFF02BB9F),
-//      primaryColorDark: const Color(0xFF167F67),
-//      accentColor: const Color(0xFF167F67),
-//    ),
-//    home: SafeArea(
-//      child: CalendarPage2(),
-//    ),
-//  ));
-//}
-//
-
-
 
 import 'package:calender_check/track.dart';
+import 'package:calender_check/win.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'cards.dart';
@@ -183,6 +165,17 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: Text(
                   "Track order"
+              ),
+            ),
+            RaisedButton(color: Colors.pinkAccent,
+              onPressed: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => win()),
+                );
+              },
+              child: Text(
+                  "C"
               ),
             )
           ],
