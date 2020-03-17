@@ -116,6 +116,29 @@ class _SecondScreenState extends State<SecondScreen> {
                   padding: const EdgeInsets.fromLTRB(8, 20, 8, 0),
                   child:Column(
                     children: <Widget>[
+
+                      Card(
+
+                            child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+
+                          children: <Widget>[
+                            Text('aaa'),
+                            Text('bbb'),
+                            Column(
+                              children: <Widget>[
+                                Text('ccc'),
+                                Text('2ccc'),
+
+                              ],
+                            )
+                          ],
+                        ),
+
+
+                      ),
+
+
                       Card(
                         child: ListTile(
                           title: Text(" Booster Changes",style: TextStyle(fontWeight: FontWeight.bold),),

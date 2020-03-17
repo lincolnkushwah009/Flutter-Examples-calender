@@ -31,14 +31,13 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   void _showcontent() {
 
-
-
     showDialog<Null>
       (barrierDismissible: false,
 
       context: context,
       builder: (BuildContext context) {
         return  AlertDialog(
+
 
           shape: RoundedRectangleBorder(
             borderRadius: new BorderRadius.circular(30.0),
@@ -50,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
                 child: Container(
-                  height: 200,
+                  height: 250,
                   width: 300,
                   alignment: Alignment.center,
                   color: Colors.transparent,
