@@ -9,32 +9,6 @@ class New extends StatefulWidget {
 
 class _NewState extends State<New> {
 
-  int current_step = 1;
-
-  List<Step> steps = [
-    Step(
-      title: Text('Placed'),
-      content: Text('Placed'),
-      isActive: true,
-    ),
-    Step(
-      title: Text(''),
-      content: Text('Processing!'),
-      isActive: true,
-    ),
-    Step(
-      title: Text('Dispached'),
-      content: Text('Dispached'),
-      isActive: true,
-    ),
-    Step(
-      title: Text('Dilivered'),
-      content: Text('Dilivered'),
-      isActive: true,
-    ),
-  ];
-
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -74,7 +48,7 @@ class _NewState extends State<New> {
 
                     Center(
                       child: Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.fromLTRB(15,0,15,0),
                         child: Row(
                           children: <Widget>[
                             Container(
