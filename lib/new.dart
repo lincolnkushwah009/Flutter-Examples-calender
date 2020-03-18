@@ -41,79 +41,135 @@ class _NewState extends State<New> {
       child: Scaffold(
         body: Container(
 
-            child: Column(
-              children: <Widget>[
-                Container(
-                  color: Colors.white,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        Text("#474-025-62M-1",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16),),
-                        Text("Submitted",style: TextStyle(color: Colors.grey),),
-                        Text("Details",style: TextStyle(color: Colors.grey,fontSize: 12)),
-                      ],
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      Text("Dec 25, 2019"),
-                      Text("Dec 28, 2019"),
-
-                    ],
-                  ),
-                ),
-
-                SizedBox(
-                  height: 40,
-                ),
-
-
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      Text("Placed"),
-                      Text("Processing"),
-                      Text("Dispached"),
-                      Text("Delivred"),
-
-                    ],
-                  ),
-                ),
-
-
-                Container(
-                  child: Column(
-
-                    children: <Widget>[
-                      Padding(
+            child: Card(
+              elevation: 10,
+              child: Center(
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                      color: Colors.white,
+                      child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
-                            Text("Placed",style: TextStyle(fontSize: 10),),
-                            Text("Error",style: TextStyle(fontSize: 10),),
-                            Text("Out for Delivrey",style: TextStyle(fontSize: 10),),
-                            Text("Invoiced/Partial Delivery",style: TextStyle(fontSize: 10),),
-
+                            Text("#474-025-62M-1",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16),),
+                            Text("Submitted",style: TextStyle(color: Colors.grey),),
+                            Text("Details",style: TextStyle(color: Colors.grey,fontSize: 12)),
                           ],
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Text("Dec 25, 2019"),
+                          Text("Dec 28, 2019"),
+
+                        ],
+                      ),
+                    ),
+
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          children: <Widget>[
+                            Container(
+                              width: 20.0,
+                              height: 20.0,
+                              decoration: new BoxDecoration(
+                                color: Colors.green,
+                                shape: BoxShape.circle,
+                              ),
+                            ),
+                            Container(
+                              height:1.0,
+                              width:80.0,
+                              color:Colors.green,),
+                            Container(
+                              width: 20.0,
+                              height: 20.0,
+                              decoration: new BoxDecoration(
+                                color: Colors.green,
+                                shape: BoxShape.circle,
+                              ),
+                            ),
+                            Container(
+                              height:1.0,
+                              width:80.0,
+                              color:Colors.green,),
+                            Container(
+                              width: 20.0,
+                              height: 20.0,
+                              decoration: new BoxDecoration(
+                                color: Colors.green,
+                                shape: BoxShape.circle,
+                              ),
+                            ),
+                            Container(
+                              height:1.0,
+                              width:80.0,
+                              color:Colors.green,),
+                            Container(
+                              width: 20.0,
+                              height: 20.0,
+                              decoration: new BoxDecoration(
+                                color: Colors.green,
+                                shape: BoxShape.circle,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Text("Placed"),
+                          Text("Processing"),
+                          Text("Dispached"),
+                          Text("Delivred"),
+
+                        ],
+                      ),
+                    ),
+
+
+                    Container(
+                      color: Colors.white,
+
+                      child: Column(
+
+                        children: <Widget>[
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Text("Placed",style: TextStyle(fontSize: 10),),
+                                Text("Error",style: TextStyle(fontSize: 10),),
+                                Text("Out for Delivrey",style: TextStyle(fontSize: 10),),
+                                Text("Invoiced/Partial Delivery",style: TextStyle(fontSize: 10),),
+
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+
+
+
+
+                  ],
                 ),
-
-
-
-
-              ],
+              ),
             )
         ),
 
