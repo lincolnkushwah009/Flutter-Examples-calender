@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'chat_model.dart';
+import 'conversation.dart';
 
 class chat extends StatefulWidget {
   @override
@@ -35,25 +36,33 @@ class _chatState extends State<chat> {
                 Divider(
                   height: 12.0,
                 ),
-                ListTile(
-                  leading: CircleAvatar(
-                    radius: 24.0,
-                    backgroundImage: NetworkImage(_model.avatarUrl),
-                  ),
-                  title: Row(
-                    children: <Widget>[
-                      Text(_model.name,style: TextStyle(color: Colors.white)),
-                      SizedBox(
-                        width: 16.0,
-                      ),
+                InkWell(
+                  onTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => conversation()),
+                    );
+                  },
+                  child: ListTile(
+                    leading: CircleAvatar(
+                      radius: 24.0,
+                      backgroundImage: NetworkImage(_model.avatarUrl),
+                    ),
+                    title: Row(
+                      children: <Widget>[
+                        Text(_model.name,style: TextStyle(color: Colors.white)),
+                        SizedBox(
+                          width: 16.0,
+                        ),
 //                      Text(
 //                        _model.datetime,
 //                        style: TextStyle(fontSize: 12.0,color: Colors.white),
 //                      ),
-                    ],
+                      ],
+                    ),
+                    subtitle: Text(_model.message,style: TextStyle(color: Colors.white70,fontStyle: FontStyle.italic)),
+                    trailing: Text("Aug 22",style: TextStyle(color: Colors.white38),),
                   ),
-                  subtitle: Text(_model.message,style: TextStyle(color: Colors.white70,fontStyle: FontStyle.italic)),
-                  trailing: Text("Aug 22",style: TextStyle(color: Colors.white38),),
                 ),
               ],
             );
