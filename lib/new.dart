@@ -152,12 +152,3 @@ class _NewState extends State<New> {
   }
 }
 
-
-/*
-     Stepper(
-                  currentStep: this.current_step,
-                  steps: steps,
-
-                  type: StepperType.vertical,
-                )
-*/

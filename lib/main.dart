@@ -1,4 +1,5 @@
 
+import 'package:calender_check/chat.dart';
 import 'package:calender_check/new.dart';
 import 'package:calender_check/step.dart';
 import 'package:calender_check/track.dart';
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: new ThemeData(
         primarySwatch: Colors.blue,
@@ -191,17 +193,17 @@ class _MyHomePageState extends State<MyHomePage> {
                   "new"
               ),
             ),
-//            RaisedButton(color: Colors.pinkAccent,
-//              onPressed: (){
-//                Navigator.push(
-//                  context,
-//                  MaterialPageRoute(builder: (context) => Steps()),
-//                );
-//              },
-//              child: Text(
-//                  "fit"
-//              ),
-//            )
+            RaisedButton(color: Colors.amberAccent,
+              onPressed: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => chat()),
+                );
+              },
+              child: Text(
+                  "chat"
+              ),
+            )
           ],
         ),
       ),
