@@ -19,6 +19,8 @@ dependencies:
   flutter_calendar: ^0.0.8
   flutter_calendar_carousel: ^1.3.10
   fireworks: ^0.9.3
+  sqflite: any
+  path_provider: any
   http:
   bubble:
 

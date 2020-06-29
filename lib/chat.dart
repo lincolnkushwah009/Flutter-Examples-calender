@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'chat_model.dart';
 import 'conversation.dart';
+import 'Models/todo.dart';
 
 class chat extends StatefulWidget {
   @override
@@ -13,9 +14,9 @@ class _chatState extends State<chat> {
 
     return Scaffold(resizeToAvoidBottomPadding: false,
 
-      backgroundColor: Colors.white10,
+      backgroundColor:Colors.black26,
       appBar: AppBar(
-        backgroundColor: Colors.white10,
+        backgroundColor: Colors.white12,
         elevation: 5,
         centerTitle: true,
         title: Text('NETWORK'),
@@ -55,7 +56,7 @@ class _chatState extends State<chat> {
                           onTap: (){
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => conversation()),
+                              MaterialPageRoute(builder: (context) => conversation(Todo('', '', ''), 'Add Todo')),
                             );
                           },
                           child: ListTile(
