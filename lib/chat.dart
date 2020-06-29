@@ -14,9 +14,9 @@ class _chatState extends State<chat> {
 
     return Scaffold(resizeToAvoidBottomPadding: false,
 
-      backgroundColor:Colors.black87,
+      backgroundColor:Colors.black26,
       appBar: AppBar(
-        backgroundColor: Colors.black87,
+        backgroundColor: Colors.black26,
         elevation: 5,
         centerTitle: true,
         title: Text('NETWORK'),

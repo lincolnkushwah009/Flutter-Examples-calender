@@ -29,9 +29,14 @@ class _conversationState extends State<conversation> {
 void updateTitle(){
     todo.title = _textController.text;
   }
+  void moveToLastScreen() {
+	  Navigator.pushReplacement(context,new MaterialPageRoute(builder: (context) => new conversation(todo, appBarTitle)));
+  }
   void _save() async {
+    
+    _textController.clear();
 
-		// moveToLastScreen();
+		moveToLastScreen();
 
 		// todo.date = DateFormat.yMMMd().format(DateTime.now());
 		int result;
@@ -170,7 +175,7 @@ class _MyHomePageState extends State<MyHomePage> {
             SingleChildScrollView(
               scrollDirection: Axis.vertical,
               child: Container(
-                height: 700,
+                height: 400,
                 color: Colors.black87,
                 child:  
                  ListView.builder(
