@@ -5,9 +5,8 @@ class conversation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black12,
       bottomSheet:  Container(
-        color: Colors.white,
+        color: Colors.black87,
         height: 50,
         width: double.infinity,
         child: Padding(
@@ -16,11 +15,12 @@ class conversation extends StatelessWidget {
 
             decoration: InputDecoration(
               suffixIcon: IconButton(
-                icon: Icon(Icons.send),
+                icon: Icon(Icons.send,color: Colors.white,),
                 onPressed: () {},
               ),
               border: InputBorder.none,
               hintText: "enter your message....",
+              hintStyle: TextStyle(color: Colors.grey)
             ),
           ),
         ),
@@ -59,10 +59,10 @@ class _MyHomePageState extends State<MyHomePage> {
     );
 
     return Scaffold(
-      backgroundColor: Colors.black12,
+      backgroundColor: Colors.grey[900],
       resizeToAvoidBottomPadding: true,
       appBar: AppBar(
-        backgroundColor: Colors.black87,
+        backgroundColor: Colors.grey[900],
         centerTitle: true,
         title: Text("NETWORK"),
       ),
@@ -70,15 +70,18 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
 
           children: <Widget>[
-            ListTile(
-              title:Text("Conversation With",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
-              subtitle: Text('polaris2112',style: TextStyle(color: Colors.white),),
+            Container(
+              color: Colors.white10,
+              child: ListTile(
+                title:Text("Conversation With",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
+                subtitle: Text('polaris2112',style: TextStyle(color: Colors.white),),
+              ),
             ),
             SingleChildScrollView(
               scrollDirection: Axis.vertical,
               child: Container(
                 height: 700,
-                color: Colors.black87,
+                color: Colors.white10,
                 child: ListView(
                   padding: EdgeInsets.all(8.0),
                   children: [
