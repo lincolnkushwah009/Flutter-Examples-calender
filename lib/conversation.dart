@@ -5,7 +5,7 @@ class conversation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black54,
+      backgroundColor: Colors.black12,
       bottomSheet:  Container(
         color: Colors.white,
         height: 50,
@@ -59,54 +59,68 @@ class _MyHomePageState extends State<MyHomePage> {
     );
 
     return Scaffold(
-
+      backgroundColor: Colors.black12,
       resizeToAvoidBottomPadding: true,
       appBar: AppBar(
         backgroundColor: Colors.black87,
-
         centerTitle: true,
         title: Text("NETWORK"),
       ),
-      body: Container(
-        color: Colors.black87,
-        child: ListView(
-          padding: EdgeInsets.all(8.0),
-          children: [
-            Bubble(
-              alignment: Alignment.center,
-              color: Color.fromARGB(255, 212, 234, 244),
-              elevation: 1 * px,
-              margin: BubbleEdges.only(top: 8.0),
-              child: Text('TODAY', style: TextStyle(fontSize: 10)),
+      body: SingleChildScrollView(
+        child: Column(
+
+          children: <Widget>[
+            ListTile(
+              title:Text("Conversation With",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
+              subtitle: Text('polaris2112',style: TextStyle(color: Colors.white),),
             ),
-            Bubble(
-              style: styleSomebody,
-              child: Text(
-                  'Hi Jason. Sorry to bother you. I have a queston for you.',style: TextStyle(color: Colors.white),),
-            ),
-            Bubble(
-              style: styleMe,
-              child: Text('Whats\'up?',style: TextStyle(color: Colors.white),),
-            ),
-            Bubble(
-              style: styleSomebody,
-              child: Text('I\'ve been having a problem with my computer.',style: TextStyle(color: Colors.white),),
-            ),
-            Bubble(
-              style: styleSomebody,
-              margin: BubbleEdges.only(top: 2.0),
-              nip: BubbleNip.no,
-              child: Text('Can you help me?',style: TextStyle(color: Colors.white),),
-            ),
-            Bubble(
-              style: styleMe,
-              child: Text('Ok',style: TextStyle(color: Colors.white),),
-            ),
-            Bubble(
-              style: styleMe,
-              nip: BubbleNip.no,
-              margin: BubbleEdges.only(top: 2.0),
-              child: Text('What\'s the problem?',style: TextStyle(color: Colors.white),),
+            SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+              child: Container(
+                height: 700,
+                color: Colors.black87,
+                child: ListView(
+                  padding: EdgeInsets.all(8.0),
+                  children: [
+                    Bubble(
+                      alignment: Alignment.center,
+                      color: Color.fromARGB(255, 212, 234, 244),
+                      elevation: 1 * px,
+                      margin: BubbleEdges.only(top: 8.0),
+                      child: Text('TODAY', style: TextStyle(fontSize: 10)),
+                    ),
+                    Bubble(
+                      style: styleSomebody,
+                      child: Text(
+                          'Hi Jason. Sorry to bother you. I have a queston for you.',style: TextStyle(color: Colors.white),),
+                    ),
+                    Bubble(
+                      style: styleMe,
+                      child: Text('Whats\'up?',style: TextStyle(color: Colors.white),),
+                    ),
+                    Bubble(
+                      style: styleSomebody,
+                      child: Text('I\'ve been having a problem with my computer.',style: TextStyle(color: Colors.white),),
+                    ),
+                    Bubble(
+                      style: styleSomebody,
+                      margin: BubbleEdges.only(top: 2.0),
+                      nip: BubbleNip.no,
+                      child: Text('Can you help me?',style: TextStyle(color: Colors.white),),
+                    ),
+                    Bubble(
+                      style: styleMe,
+                      child: Text('Ok',style: TextStyle(color: Colors.white),),
+                    ),
+                    Bubble(
+                      style: styleMe,
+                      nip: BubbleNip.no,
+                      margin: BubbleEdges.only(top: 2.0),
+                      child: Text('What\'s the problem?',style: TextStyle(color: Colors.white),),
+                    ),
+                  ],
+                ),
+              ),
             ),
           ],
         ),
