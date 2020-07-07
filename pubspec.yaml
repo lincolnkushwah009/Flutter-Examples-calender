@@ -23,6 +23,9 @@ dependencies:
   path_provider: any
   http:
   bubble:
+  imei_plugin: ^1.1.6
+  device_info: ^0.4.2+2
+
 
   pimp_my_button:
       git:
