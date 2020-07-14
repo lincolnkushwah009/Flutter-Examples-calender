@@ -2,6 +2,7 @@
  import 'package:calender_check/DeviceID.dart';
 import 'package:calender_check/chat.dart';
 import 'package:calender_check/imei.dart';
+import 'package:calender_check/logindesign.dart';
  import 'package:calender_check/new.dart';
  import 'package:calender_check/step.dart';
  import 'package:calender_check/track.dart';
@@ -217,6 +218,7 @@ import 'package:calender_check/imei.dart';
 									 "IMEI",style: TextStyle(color: Colors.white),
 							 ),
 						 ),
+
              RaisedButton(color: Colors.purple,
                onPressed: (){
                  Navigator.push(
@@ -226,6 +228,18 @@ import 'package:calender_check/imei.dart';
                },
                child: Text(
                  "Device-ID",style: TextStyle(color: Colors.white),
+               ),
+             ),
+
+             RaisedButton(color: Colors.brown,
+               onPressed: (){
+                 Navigator.push(
+                   context,
+                   MaterialPageRoute(builder: (context) => LoginScreen()),
+                 );
+               },
+               child: Text(
+                 "login design",style: TextStyle(color: Colors.white),
                ),
              ),
            ],
