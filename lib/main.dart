@@ -1,10 +1,9 @@
-
- import 'package:calender_check/DeviceID.dart';
 import 'package:calender_check/chat.dart';
-import 'package:calender_check/imei.dart';
 import 'package:calender_check/logindesign.dart';
  import 'package:calender_check/new.dart';
- import 'package:calender_check/step.dart';
+import 'package:calender_check/newDesign.dart';
+import 'package:calender_check/period.dart';
+import 'package:calender_check/periodInformer.dart';
  import 'package:calender_check/track.dart';
  import 'package:calender_check/win.dart';
  import 'package:flutter/material.dart';
@@ -207,29 +206,7 @@ import 'package:calender_check/logindesign.dart';
                    "chat"
                ),
              ),
-						 RaisedButton(color: Colors.black87,
-							 onPressed: (){
-								 Navigator.push(
-									 context,
-									 MaterialPageRoute(builder: (context) => IMEINumber()),
-								 );
-							 },
-							 child: Text(
-									 "IMEI",style: TextStyle(color: Colors.white),
-							 ),
-						 ),
 
-             RaisedButton(color: Colors.purple,
-               onPressed: (){
-                 Navigator.push(
-                   context,
-                   MaterialPageRoute(builder: (context) => DeviceID()),
-                 );
-               },
-               child: Text(
-                 "Device-ID",style: TextStyle(color: Colors.white),
-               ),
-             ),
 
              RaisedButton(color: Colors.brown,
                onPressed: (){
@@ -242,6 +219,40 @@ import 'package:calender_check/logindesign.dart';
                  "login design",style: TextStyle(color: Colors.white),
                ),
              ),
+             RaisedButton(color: Colors.brown,
+               onPressed: (){
+                 Navigator.push(
+                   context,
+                   MaterialPageRoute(builder: (context) => Design()),
+                 );
+               },
+               child: Text(
+                 "new design",style: TextStyle(color: Colors.white),
+               ),
+             ),
+             RaisedButton(color: Colors.black,
+               onPressed: (){
+                 Navigator.push(
+                   context,
+                   MaterialPageRoute(builder: (context) => Period()),
+                 );
+               },
+               child: Text(
+                 "Period",style: TextStyle(color: Colors.white),
+               ),
+             ),
+
+             RaisedButton(color: Colors. cyan,
+               onPressed: (){
+                 Navigator.push(
+                   context,
+                   MaterialPageRoute(builder: (context) => PeriodInformer()),
+                 );
+               },
+               child: Text(
+                 "Period-Informer",style: TextStyle(color: Colors.white),
+               ),
+             ),
            ],
          ),
        ),
@@ -251,28 +262,3 @@ import 'package:calender_check/logindesign.dart';
 
 
 
-
-//
-//import 'package:flutter/material.dart';
-//import 'conversation.dart';
-//import 'chat.dart';
-//
-//void main() {
-//	runApp(TodoApp());
-//}
-//
-//class TodoApp extends StatelessWidget {
-//
-//	@override
-//  Widget build(BuildContext context) {
-//
-//    return MaterialApp(
-//	    // title: 'TodoList',
-//	    debugShowCheckedModeBanner: false,
-//	    theme: ThemeData(
-//		    // primarySwatch: Colors.blue
-//	    ),
-//	    home: chat(),
-//    );
-//  }
-//}
