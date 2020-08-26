@@ -9,6 +9,7 @@ class _PeriodInformerState extends State<PeriodInformer> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomPadding: false,
       appBar: AppBar(),
       body: Center(
         child: Column(

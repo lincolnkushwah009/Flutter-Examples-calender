@@ -1,4 +1,5 @@
 import 'package:calender_check/chat.dart';
+import 'package:calender_check/dietPersonalizer.dart';
 import 'package:calender_check/logindesign.dart';
  import 'package:calender_check/new.dart';
 import 'package:calender_check/newDesign.dart';
@@ -251,6 +252,17 @@ import 'package:calender_check/periodInformer.dart';
                },
                child: Text(
                  "Period-Informer",style: TextStyle(color: Colors.white),
+               ),
+             ),
+             RaisedButton(color: Colors. cyan,
+               onPressed: (){
+                 Navigator.push(
+                   context,
+                   MaterialPageRoute(builder: (context) => DietPersonalizer()),
+                 );
+               },
+               child: Text(
+                 "Diet Personalizer",style: TextStyle(color: Colors.white),
                ),
              ),
            ],
