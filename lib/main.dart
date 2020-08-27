@@ -1,5 +1,6 @@
 import 'package:calender_check/Food-Results.dart';
 import 'package:calender_check/Macro-Nutrients-Two.dart';
+import 'package:calender_check/addFoodDetails.dart';
 import 'package:calender_check/chat.dart';
 import 'package:calender_check/dietPersonalizer.dart';
 import 'package:calender_check/logindesign.dart';
@@ -303,6 +304,18 @@ import 'package:calender_check/periodInformer.dart';
                  },
                  child: Text(
                    "Macro Nutrients 2",style: TextStyle(color: Colors.white),
+                 ),
+               ),
+               RaisedButton(
+                 color: Colors. cyan[600],
+                 onPressed: (){
+                   Navigator.push(
+                     context,
+                     MaterialPageRoute(builder: (context) => AddFoodDetails()),
+                   );
+                 },
+                 child: Text(
+                   "Add Food Details",style: TextStyle(color: Colors.white),
                  ),
                ),
              ],

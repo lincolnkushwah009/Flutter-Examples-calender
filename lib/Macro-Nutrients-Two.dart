@@ -61,7 +61,7 @@ class _MacroNutrientsTwoState extends State<MacroNutrientsTwo> {
               textColor: Colors.white,
               child: Text("Calculate required of Marcontrient"),
               onPressed: (){},
-            )
+            ),
           ],
         ),
       ),
