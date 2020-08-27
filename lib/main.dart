@@ -1,4 +1,5 @@
 import 'package:calender_check/Food-Results.dart';
+import 'package:calender_check/Macro-Nutrients-Two.dart';
 import 'package:calender_check/chat.dart';
 import 'package:calender_check/dietPersonalizer.dart';
 import 'package:calender_check/logindesign.dart';
@@ -144,156 +145,170 @@ import 'package:calender_check/periodInformer.dart';
        appBar: new AppBar(
          title: new Text(widget.title),
        ),
-       body: new Center(
-         child: new Column(
-           mainAxisAlignment: MainAxisAlignment.center,
-           children: <Widget>[
+       body: new SingleChildScrollView(
+         child:  Center(
+           child: new Column(
+             mainAxisAlignment: MainAxisAlignment.center,
+             children: <Widget>[
 
-             new RaisedButton(onPressed: _showcontent, color: Colors.blueAccent,
-               child:
-               new Text('Click here', style: TextStyle(color: Colors.white)),
-             ),
+               new RaisedButton(onPressed: _showcontent, color: Colors.blueAccent,
+                 child:
+                 new Text('Click here', style: TextStyle(color: Colors.white)),
+               ),
 
-             RaisedButton(
-               onPressed: (){
-                 Navigator.push(
-                   context,
-                   MaterialPageRoute(builder: (context) => Cards()),
-                 );
-               },
-               child: Text(
-                 "Card"
+               RaisedButton(
+                 onPressed: (){
+                   Navigator.push(
+                     context,
+                     MaterialPageRoute(builder: (context) => Cards()),
+                   );
+                 },
+                 child: Text(
+                     "Card"
+                 ),
                ),
-             ),
-             RaisedButton(color: Colors.red,
-               onPressed: (){
-                 Navigator.push(
-                   context,
-                   MaterialPageRoute(builder: (context) => Track()),
-                 );
-               },
-               child: Text(
-                   "Track order"
+               RaisedButton(color: Colors.red,
+                 onPressed: (){
+                   Navigator.push(
+                     context,
+                     MaterialPageRoute(builder: (context) => Track()),
+                   );
+                 },
+                 child: Text(
+                     "Track order"
+                 ),
                ),
-             ),
-             RaisedButton(color: Colors.pinkAccent,
-               onPressed: (){
-                 Navigator.push(
-                   context,
-                   MaterialPageRoute(builder: (context) => win()),
-                 );
-               },
-               child: Text(
-                   "C"
+               RaisedButton(color: Colors.pinkAccent,
+                 onPressed: (){
+                   Navigator.push(
+                     context,
+                     MaterialPageRoute(builder: (context) => win()),
+                   );
+                 },
+                 child: Text(
+                     "C"
+                 ),
                ),
-             ),
-             RaisedButton(color: Colors.green,
-               onPressed: (){
-                 Navigator.push(
-                   context,
-                   MaterialPageRoute(builder: (context) => New()),
-                 );
-               },
-               child: Text(
-                   "new"
+               RaisedButton(color: Colors.green,
+                 onPressed: (){
+                   Navigator.push(
+                     context,
+                     MaterialPageRoute(builder: (context) => New()),
+                   );
+                 },
+                 child: Text(
+                     "new"
+                 ),
                ),
-             ),
-             RaisedButton(color: Colors.amberAccent,
-               onPressed: (){
-                 Navigator.push(
-                   context,
-                   MaterialPageRoute(builder: (context) => chat()),
-                 );
-               },
-               child: Text(
-                   "chat"
+               RaisedButton(color: Colors.amberAccent,
+                 onPressed: (){
+                   Navigator.push(
+                     context,
+                     MaterialPageRoute(builder: (context) => chat()),
+                   );
+                 },
+                 child: Text(
+                     "chat"
+                 ),
                ),
-             ),
 
 
-             RaisedButton(color: Colors.brown,
-               onPressed: (){
-                 Navigator.push(
-                   context,
-                   MaterialPageRoute(builder: (context) => LoginScreen()),
-                 );
-               },
-               child: Text(
-                 "login design",style: TextStyle(color: Colors.white),
+               RaisedButton(color: Colors.brown,
+                 onPressed: (){
+                   Navigator.push(
+                     context,
+                     MaterialPageRoute(builder: (context) => LoginScreen()),
+                   );
+                 },
+                 child: Text(
+                   "login design",style: TextStyle(color: Colors.white),
+                 ),
                ),
-             ),
-             RaisedButton(color: Colors.brown,
-               onPressed: (){
-                 Navigator.push(
-                   context,
-                   MaterialPageRoute(builder: (context) => Design()),
-                 );
-               },
-               child: Text(
-                 "new design",style: TextStyle(color: Colors.white),
+               RaisedButton(color: Colors.brown,
+                 onPressed: (){
+                   Navigator.push(
+                     context,
+                     MaterialPageRoute(builder: (context) => Design()),
+                   );
+                 },
+                 child: Text(
+                   "new design",style: TextStyle(color: Colors.white),
+                 ),
                ),
-             ),
-             RaisedButton(color: Colors.black,
-               onPressed: (){
-                 Navigator.push(
-                   context,
-                   MaterialPageRoute(builder: (context) => Period()),
-                 );
-               },
-               child: Text(
-                 "Period",style: TextStyle(color: Colors.white),
+               RaisedButton(color: Colors.black,
+                 onPressed: (){
+                   Navigator.push(
+                     context,
+                     MaterialPageRoute(builder: (context) => Period()),
+                   );
+                 },
+                 child: Text(
+                   "Period",style: TextStyle(color: Colors.white),
+                 ),
                ),
-             ),
 
-             RaisedButton(color: Colors. cyan,
-               onPressed: (){
-                 Navigator.push(
-                   context,
-                   MaterialPageRoute(builder: (context) => PeriodInformer()),
-                 );
-               },
-               child: Text(
-                 "Period-Informer",style: TextStyle(color: Colors.white),
+               RaisedButton(color: Colors. cyan,
+                 onPressed: (){
+                   Navigator.push(
+                     context,
+                     MaterialPageRoute(builder: (context) => PeriodInformer()),
+                   );
+                 },
+                 child: Text(
+                   "Period-Informer",style: TextStyle(color: Colors.white),
+                 ),
                ),
-             ),
-             RaisedButton(color: Colors. cyan,
-               onPressed: (){
-                 Navigator.push(
-                   context,
-                   MaterialPageRoute(builder: (context) => DietPersonalizer()),
-                 );
-               },
-               child: Text(
-                 "Diet Personalizer",style: TextStyle(color: Colors.white),
+               RaisedButton(color: Colors. cyan,
+                 onPressed: (){
+                   Navigator.push(
+                     context,
+                     MaterialPageRoute(builder: (context) => DietPersonalizer()),
+                   );
+                 },
+                 child: Text(
+                   "Diet Personalizer",style: TextStyle(color: Colors.white),
+                 ),
                ),
-             ),
-             RaisedButton(
-               color: Colors. cyan[200],
-               onPressed: (){
-                 Navigator.push(
-                   context,
-                   MaterialPageRoute(builder: (context) => MacroNutrients()),
-                 );
-               },
-               child: Text(
-                 "Macro Nutrients",style: TextStyle(color: Colors.white),
+               RaisedButton(
+                 color: Colors. cyan[200],
+                 onPressed: (){
+                   Navigator.push(
+                     context,
+                     MaterialPageRoute(builder: (context) => MacroNutrients()),
+                   );
+                 },
+                 child: Text(
+                   "Macro Nutrients",style: TextStyle(color: Colors.white),
+                 ),
                ),
-             ),
-             RaisedButton(
-               color: Colors. cyan[600],
-               onPressed: (){
-                 Navigator.push(
-                   context,
-                   MaterialPageRoute(builder: (context) => FoodResults()),
-                 );
-               },
-               child: Text(
-                 "Food Results",style: TextStyle(color: Colors.white),
+               RaisedButton(
+                 color: Colors. cyan[600],
+                 onPressed: (){
+                   Navigator.push(
+                     context,
+                     MaterialPageRoute(builder: (context) => FoodResults()),
+                   );
+                 },
+                 child: Text(
+                   "Food Results",style: TextStyle(color: Colors.white),
+                 ),
                ),
-             ),
-           ],
+               RaisedButton(
+                 color: Colors. cyan[600],
+                 onPressed: (){
+                   Navigator.push(
+                     context,
+                     MaterialPageRoute(builder: (context) => MacroNutrientsTwo()),
+                   );
+                 },
+                 child: Text(
+                   "Macro Nutrients 2",style: TextStyle(color: Colors.white),
+                 ),
+               ),
+             ],
+           ),
          ),
-       ),
+       )
      );
    }
  }

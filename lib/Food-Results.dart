@@ -719,10 +719,6 @@ class _FoodResultsState extends State<FoodResults> {
                 ),
 
 
-
-
-
-
               ],
             ),
 
