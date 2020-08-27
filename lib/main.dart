@@ -10,6 +10,7 @@ import 'package:calender_check/periodInformer.dart';
  import 'package:flutter/material.dart';
  import 'package:flutter/widgets.dart';
  import 'cards.dart';
+ import 'package:calender_check/macro Nutrients.dart';
 
  import 'example.dart';
 
@@ -263,6 +264,17 @@ import 'package:calender_check/periodInformer.dart';
                },
                child: Text(
                  "Diet Personalizer",style: TextStyle(color: Colors.white),
+               ),
+             ),
+             RaisedButton(color: Colors. cyan[200],
+               onPressed: (){
+                 Navigator.push(
+                   context,
+                   MaterialPageRoute(builder: (context) => MacroNutrients()),
+                 );
+               },
+               child: Text(
+                 "Macro Nutrients",style: TextStyle(color: Colors.white),
                ),
              ),
            ],
