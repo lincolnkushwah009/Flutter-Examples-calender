@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class MacroNutrients extends StatefulWidget {
+class FoodResults extends StatefulWidget {
   @override
-  _MacroNutrientsState createState() => _MacroNutrientsState();
+  _FoodResultsState createState() => _FoodResultsState();
 }
 
-class _MacroNutrientsState extends State<MacroNutrients> {
+class _FoodResultsState extends State<FoodResults> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,142 +71,84 @@ class _MacroNutrientsState extends State<MacroNutrients> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  Text("Results (Macro Nutrients)",style: TextStyle(color: Colors.blue[800],fontWeight: FontWeight.bold,fontSize: 15)),
+                  Text("Results\n(High nutrient value food)",style: TextStyle(color: Colors.blue[800],fontWeight: FontWeight.bold,fontSize: 15)),
                   Icon(Icons.info,color: Colors.blue[800],)
                 ],),
             ),
 
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: <Widget>[
-
-                ClipRRect(
-                  borderRadius: new BorderRadius.circular(5.0),
-                  child: Container(
-                    width: MediaQuery.of(context).size.width *0.3,
-
-                    decoration: BoxDecoration(
-                        color: Colors.blue[900],
-                        boxShadow: [BoxShadow(
-                          color: Colors.grey,
-                          blurRadius: 7.0,
-                        ),],
-                        border: Border.all(
-                            width: 1,
-                            color: Colors.blue[800]
-                        )
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(10,5,10,5),
-                      child: Text ("Vegetarian Meal",style: TextStyle(color: Colors.white,fontSize: 11),),
-                    ),
-                  ),
-                ),
-
-                ClipRRect(
-                  borderRadius: new BorderRadius.circular(5.0),
-                  child: Container(
-                    width: MediaQuery.of(context).size.width *0.6,
-                    decoration: BoxDecoration(
-                        color: Colors.blue[900],
-                        boxShadow: [BoxShadow(
-                          color: Colors.grey,
-                          blurRadius: 7.0,
-                        ),],
-                        border: Border.all(
-                            width: 1,
-                            color: Colors.blue[800]
-                        )
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(10,2,10,2),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: <Widget>[
-                          Text ("Amount/portion",style: TextStyle(color: Colors.white,fontSize: 12),),
-                          Container(
-                            color: Colors.white,
-                            width: 1.5,
-                            height: 20,
-                          ),
-                          Text ("No of portion",style: TextStyle(color: Colors.white,fontSize: 12),),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-
-
-
-
-              ],
-            ),
-
-            SizedBox(height: 5),
-
+            SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
 
 
                 Container(
-                    width: MediaQuery.of(context).size.width *0.3,
+                  width: MediaQuery.of(context).size.width *0.3,
 
-                    decoration: BoxDecoration(
-                        borderRadius: new BorderRadius.circular(5.0),
+                  decoration: BoxDecoration(
+                      borderRadius: new BorderRadius.circular(5.0),
 
-                        color: Colors.white,
-                        boxShadow: [BoxShadow(
-                          color: Colors.grey,
-                          blurRadius: 7.0,
-                        ),],
-                        border: Border.all(
-                            width: 1,
-                            color: Colors.blue[800]
-                        )
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(10,5,10,5),
-                      child: Text ("Cereals & milets",style: TextStyle(color: Colors.blue,fontSize: 11),),
-                    ),
+                      color: Colors.blue,
+                      boxShadow: [BoxShadow(
+                        color: Colors.grey,
+                        blurRadius: 7.0,
+                      ),],
+                      border: Border.all(
+                          width: 1,
+                          color: Colors.blue[800]
+                      )
                   ),
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(10,5,10,5),
+                    child: Text ("Protein Food",style: TextStyle(color: Colors.white,fontSize: 11),),
+                  ),
+                ),
 
 
-               Container(
-                    width: MediaQuery.of(context).size.width *0.6,
-                    decoration: BoxDecoration(
-                        borderRadius: new BorderRadius.circular(5.0),
+                Container(
+                  width: MediaQuery.of(context).size.width *0.6,
+                  decoration: BoxDecoration(
+                      borderRadius: new BorderRadius.circular(5.0),
 
-                        color: Colors.white,
-                        boxShadow: [BoxShadow(
-                          color: Colors.grey,
-                          blurRadius: 7.0,
-                        ),],
-                        border: Border.all(
-                            width: 1,
-                            color: Colors.blue[800]
-                        )
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(10,2,10,2),
-                      child: Row(
+                      color: Colors.white,
+                      boxShadow: [BoxShadow(
+                        color: Colors.grey,
+                        blurRadius: 7.0,
+                      ),],
+                      border: Border.all(
+                          width: 1,
+                          color: Colors.blue[800]
+                      )
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(10,2,10,2),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text ("Gram, Lentil",style: TextStyle(color: Colors.blue,fontSize: 12),),
+                      Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
-                          Text ("30",style: TextStyle(color: Colors.blue,fontSize: 12),),
                           Container(
                             color: Colors.blue,
                             width: 1.5,
                             height: 20,
                           ),
-                          Container(
+                       Padding(
+                         padding: const EdgeInsets.fromLTRB(15,2,15,2),
 
-                              child: Text ("-",style: TextStyle(color: Colors.blue,fontSize: 12),textAlign: TextAlign.center,),
+                         child: Container(
 
-                          )
+                           child: Text ("22 g",style: TextStyle(color: Colors.blue,fontSize: 12),textAlign: TextAlign.center,),
+
+                         ),
+                       )
                         ],
-                      ),
+                      )
+                      ],
                     ),
                   ),
+                ),
 
 
 
@@ -215,8 +157,8 @@ class _MacroNutrientsState extends State<MacroNutrients> {
 
               ],
             ),
-            SizedBox(height: 5),
 
+            SizedBox(height: 8),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
@@ -228,7 +170,7 @@ class _MacroNutrientsState extends State<MacroNutrients> {
                   decoration: BoxDecoration(
                       borderRadius: new BorderRadius.circular(5.0),
 
-                      color: Colors.white,
+                      color: Colors.blue,
                       boxShadow: [BoxShadow(
                         color: Colors.grey,
                         blurRadius: 7.0,
@@ -240,7 +182,7 @@ class _MacroNutrientsState extends State<MacroNutrients> {
                   ),
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(10,5,10,5),
-                    child: Text ("Cereals & milets",style: TextStyle(color: Colors.blue,fontSize: 11),),
+                    child: Text ("Protein Food",style: TextStyle(color: Colors.white,fontSize: 11),),
                   ),
                 ),
 
@@ -265,16 +207,25 @@ class _MacroNutrientsState extends State<MacroNutrients> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
-                        Text ("30",style: TextStyle(color: Colors.blue,fontSize: 12),),
-                        Container(
-                          color: Colors.blue,
-                          width: 1.5,
-                          height: 20,
-                        ),
-                        Container(
+                        Text ("Gram, Lentil",style: TextStyle(color: Colors.blue,fontSize: 12),),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Container(
+                              color: Colors.blue,
+                              width: 1.5,
+                              height: 20,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(15,2,15,2),
 
-                          child: Text ("-",style: TextStyle(color: Colors.blue,fontSize: 12),textAlign: TextAlign.center,),
+                              child: Container(
 
+                                child: Text ("22 g",style: TextStyle(color: Colors.blue,fontSize: 12),textAlign: TextAlign.center,),
+
+                              ),
+                            )
+                          ],
                         )
                       ],
                     ),
@@ -288,9 +239,7 @@ class _MacroNutrientsState extends State<MacroNutrients> {
 
               ],
             ),
-
-            SizedBox(height: 5),
-
+            SizedBox(height: 8),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
@@ -302,7 +251,7 @@ class _MacroNutrientsState extends State<MacroNutrients> {
                   decoration: BoxDecoration(
                       borderRadius: new BorderRadius.circular(5.0),
 
-                      color: Colors.white,
+                      color: Colors.blue,
                       boxShadow: [BoxShadow(
                         color: Colors.grey,
                         blurRadius: 7.0,
@@ -314,7 +263,7 @@ class _MacroNutrientsState extends State<MacroNutrients> {
                   ),
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(10,5,10,5),
-                    child: Text ("Cereals & milets",style: TextStyle(color: Colors.blue,fontSize: 11),),
+                    child: Text ("Protein Food",style: TextStyle(color: Colors.white,fontSize: 11),),
                   ),
                 ),
 
@@ -339,16 +288,25 @@ class _MacroNutrientsState extends State<MacroNutrients> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
-                        Text ("30",style: TextStyle(color: Colors.blue,fontSize: 12),),
-                        Container(
-                          color: Colors.blue,
-                          width: 1.5,
-                          height: 20,
-                        ),
-                        Container(
+                        Text ("Gram, Lentil",style: TextStyle(color: Colors.blue,fontSize: 12),),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Container(
+                              color: Colors.blue,
+                              width: 1.5,
+                              height: 20,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(15,2,15,2),
 
-                          child: Text ("-",style: TextStyle(color: Colors.blue,fontSize: 12),textAlign: TextAlign.center,),
+                              child: Container(
 
+                                child: Text ("22 g",style: TextStyle(color: Colors.blue,fontSize: 12),textAlign: TextAlign.center,),
+
+                              ),
+                            )
+                          ],
                         )
                       ],
                     ),
@@ -362,9 +320,7 @@ class _MacroNutrientsState extends State<MacroNutrients> {
 
               ],
             ),
-
-            SizedBox(height: 5),
-
+            SizedBox(height: 8),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
@@ -376,7 +332,7 @@ class _MacroNutrientsState extends State<MacroNutrients> {
                   decoration: BoxDecoration(
                       borderRadius: new BorderRadius.circular(5.0),
 
-                      color: Colors.white,
+                      color: Colors.blue,
                       boxShadow: [BoxShadow(
                         color: Colors.grey,
                         blurRadius: 7.0,
@@ -388,7 +344,7 @@ class _MacroNutrientsState extends State<MacroNutrients> {
                   ),
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(10,5,10,5),
-                    child: Text ("Cereals & milets",style: TextStyle(color: Colors.blue,fontSize: 11),),
+                    child: Text ("Protein Food",style: TextStyle(color: Colors.white,fontSize: 11),),
                   ),
                 ),
 
@@ -413,16 +369,25 @@ class _MacroNutrientsState extends State<MacroNutrients> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
-                        Text ("30",style: TextStyle(color: Colors.blue,fontSize: 12),),
-                        Container(
-                          color: Colors.blue,
-                          width: 1.5,
-                          height: 20,
-                        ),
-                        Container(
+                        Text ("Gram, Lentil",style: TextStyle(color: Colors.blue,fontSize: 12),),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Container(
+                              color: Colors.blue,
+                              width: 1.5,
+                              height: 20,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(15,2,15,2),
 
-                          child: Text ("-",style: TextStyle(color: Colors.blue,fontSize: 12),textAlign: TextAlign.center,),
+                              child: Container(
 
+                                child: Text ("22 g",style: TextStyle(color: Colors.blue,fontSize: 12),textAlign: TextAlign.center,),
+
+                              ),
+                            )
+                          ],
                         )
                       ],
                     ),
@@ -436,9 +401,7 @@ class _MacroNutrientsState extends State<MacroNutrients> {
 
               ],
             ),
-
-            SizedBox(height: 5),
-
+            SizedBox(height: 8),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
@@ -450,7 +413,7 @@ class _MacroNutrientsState extends State<MacroNutrients> {
                   decoration: BoxDecoration(
                       borderRadius: new BorderRadius.circular(5.0),
 
-                      color: Colors.white,
+                      color: Colors.blue,
                       boxShadow: [BoxShadow(
                         color: Colors.grey,
                         blurRadius: 7.0,
@@ -462,7 +425,7 @@ class _MacroNutrientsState extends State<MacroNutrients> {
                   ),
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(10,5,10,5),
-                    child: Text ("Cereals & milets",style: TextStyle(color: Colors.blue,fontSize: 11),),
+                    child: Text ("Protein Food",style: TextStyle(color: Colors.white,fontSize: 11),),
                   ),
                 ),
 
@@ -487,16 +450,25 @@ class _MacroNutrientsState extends State<MacroNutrients> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
-                        Text ("30",style: TextStyle(color: Colors.blue,fontSize: 12),),
-                        Container(
-                          color: Colors.blue,
-                          width: 1.5,
-                          height: 20,
-                        ),
-                        Container(
+                        Text ("Gram, Lentil",style: TextStyle(color: Colors.blue,fontSize: 12),),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Container(
+                              color: Colors.blue,
+                              width: 1.5,
+                              height: 20,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(15,2,15,2),
 
-                          child: Text ("-",style: TextStyle(color: Colors.blue,fontSize: 12),textAlign: TextAlign.center,),
+                              child: Container(
 
+                                child: Text ("22 g",style: TextStyle(color: Colors.blue,fontSize: 12),textAlign: TextAlign.center,),
+
+                              ),
+                            )
+                          ],
                         )
                       ],
                     ),
@@ -510,8 +482,7 @@ class _MacroNutrientsState extends State<MacroNutrients> {
 
               ],
             ),
-            SizedBox(height: 5),
-
+            SizedBox(height: 8),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
@@ -523,7 +494,7 @@ class _MacroNutrientsState extends State<MacroNutrients> {
                   decoration: BoxDecoration(
                       borderRadius: new BorderRadius.circular(5.0),
 
-                      color: Colors.white,
+                      color: Colors.blue,
                       boxShadow: [BoxShadow(
                         color: Colors.grey,
                         blurRadius: 7.0,
@@ -535,7 +506,7 @@ class _MacroNutrientsState extends State<MacroNutrients> {
                   ),
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(10,5,10,5),
-                    child: Text ("Cereals & milets",style: TextStyle(color: Colors.blue,fontSize: 11),),
+                    child: Text ("Protein Food",style: TextStyle(color: Colors.white,fontSize: 11),),
                   ),
                 ),
 
@@ -560,16 +531,25 @@ class _MacroNutrientsState extends State<MacroNutrients> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
-                        Text ("30",style: TextStyle(color: Colors.blue,fontSize: 12),),
-                        Container(
-                          color: Colors.blue,
-                          width: 1.5,
-                          height: 20,
-                        ),
-                        Container(
+                        Text ("Gram, Lentil",style: TextStyle(color: Colors.blue,fontSize: 12),),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Container(
+                              color: Colors.blue,
+                              width: 1.5,
+                              height: 20,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(15,2,15,2),
 
-                          child: Text ("-",style: TextStyle(color: Colors.blue,fontSize: 12),textAlign: TextAlign.center,),
+                              child: Container(
 
+                                child: Text ("22 g",style: TextStyle(color: Colors.blue,fontSize: 12),textAlign: TextAlign.center,),
+
+                              ),
+                            )
+                          ],
                         )
                       ],
                     ),
@@ -583,9 +563,7 @@ class _MacroNutrientsState extends State<MacroNutrients> {
 
               ],
             ),
-
-            SizedBox(height: 5),
-
+            SizedBox(height: 8),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
@@ -597,7 +575,7 @@ class _MacroNutrientsState extends State<MacroNutrients> {
                   decoration: BoxDecoration(
                       borderRadius: new BorderRadius.circular(5.0),
 
-                      color: Colors.white,
+                      color: Colors.blue,
                       boxShadow: [BoxShadow(
                         color: Colors.grey,
                         blurRadius: 7.0,
@@ -609,7 +587,7 @@ class _MacroNutrientsState extends State<MacroNutrients> {
                   ),
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(10,5,10,5),
-                    child: Text ("Cereals & milets",style: TextStyle(color: Colors.blue,fontSize: 11),),
+                    child: Text ("Protein Food",style: TextStyle(color: Colors.white,fontSize: 11),),
                   ),
                 ),
 
@@ -634,16 +612,25 @@ class _MacroNutrientsState extends State<MacroNutrients> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
-                        Text ("30",style: TextStyle(color: Colors.blue,fontSize: 12),),
-                        Container(
-                          color: Colors.blue,
-                          width: 1.5,
-                          height: 20,
-                        ),
-                        Container(
+                        Text ("Gram, Lentil",style: TextStyle(color: Colors.blue,fontSize: 12),),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Container(
+                              color: Colors.blue,
+                              width: 1.5,
+                              height: 20,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(15,2,15,2),
 
-                          child: Text ("-",style: TextStyle(color: Colors.blue,fontSize: 12),textAlign: TextAlign.center,),
+                              child: Container(
 
+                                child: Text ("22 g",style: TextStyle(color: Colors.blue,fontSize: 12),textAlign: TextAlign.center,),
+
+                              ),
+                            )
+                          ],
                         )
                       ],
                     ),
@@ -657,9 +644,7 @@ class _MacroNutrientsState extends State<MacroNutrients> {
 
               ],
             ),
-
-            SizedBox(height: 5),
-
+            SizedBox(height: 8),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
@@ -671,7 +656,7 @@ class _MacroNutrientsState extends State<MacroNutrients> {
                   decoration: BoxDecoration(
                       borderRadius: new BorderRadius.circular(5.0),
 
-                      color: Colors.white,
+                      color: Colors.blue,
                       boxShadow: [BoxShadow(
                         color: Colors.grey,
                         blurRadius: 7.0,
@@ -683,7 +668,7 @@ class _MacroNutrientsState extends State<MacroNutrients> {
                   ),
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(10,5,10,5),
-                    child: Text ("Cereals & milets",style: TextStyle(color: Colors.blue,fontSize: 11),),
+                    child: Text ("Protein Food",style: TextStyle(color: Colors.white,fontSize: 11),),
                   ),
                 ),
 
@@ -708,16 +693,25 @@ class _MacroNutrientsState extends State<MacroNutrients> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
-                        Text ("30",style: TextStyle(color: Colors.blue,fontSize: 12),),
-                        Container(
-                          color: Colors.blue,
-                          width: 1.5,
-                          height: 20,
-                        ),
-                        Container(
+                        Text ("Gram, Lentil",style: TextStyle(color: Colors.blue,fontSize: 12),),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Container(
+                              color: Colors.blue,
+                              width: 1.5,
+                              height: 20,
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(15,2,15,2),
 
-                          child: Text ("-",style: TextStyle(color: Colors.blue,fontSize: 12),textAlign: TextAlign.center,),
+                              child: Container(
 
+                                child: Text ("22 g",style: TextStyle(color: Colors.blue,fontSize: 12),textAlign: TextAlign.center,),
+
+                              ),
+                            )
+                          ],
                         )
                       ],
                     ),
@@ -732,80 +726,12 @@ class _MacroNutrientsState extends State<MacroNutrients> {
               ],
             ),
 
-            SizedBox(height: 5),
-
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: <Widget>[
-
-
-                Container(
-                  width: MediaQuery.of(context).size.width *0.3,
-
-                  decoration: BoxDecoration(
-                      borderRadius: new BorderRadius.circular(5.0),
-
-                      color: Colors.white,
-                      boxShadow: [BoxShadow(
-                        color: Colors.grey,
-                        blurRadius: 7.0,
-                      ),],
-                      border: Border.all(
-                          width: 1,
-                          color: Colors.blue[800]
-                      )
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(10,5,10,5),
-                    child: Text ("Cereals & milets",style: TextStyle(color: Colors.blue,fontSize: 11),),
-                  ),
-                ),
-
-
-                Container(
-                  width: MediaQuery.of(context).size.width *0.6,
-                  decoration: BoxDecoration(
-                      borderRadius: new BorderRadius.circular(5.0),
-
-                      color: Colors.white,
-                      boxShadow: [BoxShadow(
-                        color: Colors.grey,
-                        blurRadius: 7.0,
-                      ),],
-                      border: Border.all(
-                          width: 1,
-                          color: Colors.blue[800]
-                      )
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(10,2,10,2),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        Text ("30",style: TextStyle(color: Colors.blue,fontSize: 12),),
-                        Container(
-                          color: Colors.blue,
-                          width: 1.5,
-                          height: 20,
-                        ),
-                        Container(
-
-                          child: Text ("-",style: TextStyle(color: Colors.blue,fontSize: 12),textAlign: TextAlign.center,),
-
-                        )
-                      ],
-                    ),
-                  ),
-                ),
-
-
-              ],
-            ),
 
 
           ],
         ),
       ),
     );
+
   }
 }

@@ -1,3 +1,4 @@
+import 'package:calender_check/Food-Results.dart';
 import 'package:calender_check/chat.dart';
 import 'package:calender_check/dietPersonalizer.dart';
 import 'package:calender_check/logindesign.dart';
@@ -266,7 +267,8 @@ import 'package:calender_check/periodInformer.dart';
                  "Diet Personalizer",style: TextStyle(color: Colors.white),
                ),
              ),
-             RaisedButton(color: Colors. cyan[200],
+             RaisedButton(
+               color: Colors. cyan[200],
                onPressed: (){
                  Navigator.push(
                    context,
@@ -275,6 +277,18 @@ import 'package:calender_check/periodInformer.dart';
                },
                child: Text(
                  "Macro Nutrients",style: TextStyle(color: Colors.white),
+               ),
+             ),
+             RaisedButton(
+               color: Colors. cyan[600],
+               onPressed: (){
+                 Navigator.push(
+                   context,
+                   MaterialPageRoute(builder: (context) => FoodResults()),
+                 );
+               },
+               child: Text(
+                 "Food Results",style: TextStyle(color: Colors.white),
                ),
              ),
            ],
