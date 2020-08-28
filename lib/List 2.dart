@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import 'Components/ListOneData.dart';
-
-
-class ListOne extends StatefulWidget {
+import 'Components/ListTwoData.dart';
+class ListTwo extends StatefulWidget {
   @override
-  _ListOneState createState() => _ListOneState();
+  _ListTwoState createState() => _ListTwoState();
 }
 
-class _ListOneState extends State<ListOne> {
+class _ListTwoState extends State<ListTwo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,6 +15,8 @@ class _ListOneState extends State<ListOne> {
 
         child: Column(
           children: <Widget>[
+
+
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
@@ -30,8 +30,8 @@ class _ListOneState extends State<ListOne> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
                     Container(
-                      width: MediaQuery.of(context).size.width * 0.1,
-                      child: Text("Date of Admit",style: TextStyle(fontSize: 10,fontWeight: FontWeight.bold),),
+                      width: MediaQuery.of(context).size.width * 0.2,
+                      child: Text("Problem",style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold),),
                     ),
                     Container(
                       height: 50,
@@ -39,8 +39,8 @@ class _ListOneState extends State<ListOne> {
                       width: 4,
                     ),
                     Container(
-                      width: MediaQuery.of(context).size.width * 0.1,
-                      child: Text("Last Hospital",style: TextStyle(fontSize: 9,fontWeight: FontWeight.bold),),
+                      width: MediaQuery.of(context).size.width * 0.2,
+                      child: Text("Photo",style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold),),
                     ),
                     Container(
                       height: 50,
@@ -48,27 +48,10 @@ class _ListOneState extends State<ListOne> {
                       width: 4,
                     ),
                     Container(
-                      width: MediaQuery.of(context).size.width * 0.1,
-                      child: Text("Blood Transfusion",style: TextStyle(fontSize: 9,fontWeight: FontWeight.bold),),
+                      width: MediaQuery.of(context).size.width * 0.2,
+                      child: Text("Video",style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold),),
                     ),
-                    Container(
-                      height: 50,
-                      color: Colors.black12,
-                      width: 4,
-                    ),
-                    Container(
-                      width: MediaQuery.of(context).size.width * 0.1,
-                      child: Text("Total Unit Transfusion",style: TextStyle(fontSize: 9,fontWeight: FontWeight.bold),),
-                    ),
-                    Container(
-                      height: 50,
-                      color: Colors.black12,
-                      width: 4,
-                    ),
-                    Container(
-                      width: MediaQuery.of(context).size.width * 0.1,
-                      child: Text("Attached Photo",style: TextStyle(fontSize: 9,fontWeight: FontWeight.bold),),
-                    ),
+
                   ],
                 ),
               ),
@@ -83,11 +66,11 @@ class _ListOneState extends State<ListOne> {
               ),
               height: MediaQuery.of(context).size.height * 0.7,
               width: MediaQuery.of(context).size.width * 0.9,
-              child: Container(
+                child: Container(
                 height: MediaQuery.of(context).size.height * 0.7,
 
-                child: ListOneData() ,
-              ),
+      child: ListTwoData() ,
+    ),
             )
           ],
         ),
