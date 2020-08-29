@@ -15,9 +15,9 @@ import 'package:calender_check/periodInformer.dart';
  import 'package:flutter/widgets.dart';
  import 'cards.dart';
  import 'package:calender_check/macro Nutrients.dart';
-
  import 'example.dart';
  import 'List 2.dart';
+ import 'blogs.dart';
 
 
  void main() => runApp(new MyApp());
@@ -342,6 +342,18 @@ import 'package:calender_check/periodInformer.dart';
                  },
                  child: Text(
                    "List Two",style: TextStyle(color: Colors.white),
+                 ),
+               ),
+               RaisedButton(
+                 color: Colors. red[600],
+                 onPressed: (){
+                   Navigator.push(
+                     context,
+                     MaterialPageRoute(builder: (context) => Blog()),
+                   );
+                 },
+                 child: Text(
+                   "Blog",style: TextStyle(color: Colors.white),
                  ),
                ),
              ],
