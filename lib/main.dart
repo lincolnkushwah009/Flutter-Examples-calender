@@ -7,6 +7,7 @@ import 'package:calender_check/list1.dart';
 import 'package:calender_check/logindesign.dart';
  import 'package:calender_check/new.dart';
 import 'package:calender_check/newDesign.dart';
+import 'package:calender_check/otherMadicalProblems.dart';
 import 'package:calender_check/period.dart';
 import 'package:calender_check/periodInformer.dart';
  import 'package:calender_check/track.dart';
@@ -354,6 +355,18 @@ import 'package:calender_check/periodInformer.dart';
                  },
                  child: Text(
                    "Blog",style: TextStyle(color: Colors.white),
+                 ),
+               ),
+               RaisedButton(
+                 color: Colors. blue[600],
+                 onPressed: (){
+                   Navigator.push(
+                     context,
+                     MaterialPageRoute(builder: (context) => MedicalProblems()),
+                   );
+                 },
+                 child: Text(
+                   "Medical Problems",style: TextStyle(color: Colors.white),
                  ),
                ),
              ],
