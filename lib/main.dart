@@ -1,5 +1,7 @@
+import 'package:calender_check/Add-Medicine.dart';
 import 'package:calender_check/Food-Results.dart';
 import 'package:calender_check/Macro-Nutrients-Two.dart';
+import 'package:calender_check/SelectMedicine.dart';
 import 'package:calender_check/addFoodDetails.dart';
 import 'package:calender_check/chat.dart';
 import 'package:calender_check/dietPersonalizer.dart';
@@ -11,6 +13,7 @@ import 'package:calender_check/otherMadicalProblems.dart';
 import 'package:calender_check/period.dart';
 import 'package:calender_check/periodInformer.dart';
  import 'package:calender_check/track.dart';
+import 'package:calender_check/treatment.dart';
  import 'package:calender_check/win.dart';
  import 'package:flutter/material.dart';
  import 'package:flutter/widgets.dart';
@@ -19,7 +22,7 @@ import 'package:calender_check/periodInformer.dart';
  import 'example.dart';
  import 'List 2.dart';
  import 'blogs.dart';
-
+import 'Duration.dart';
 
  void main() => runApp(new MyApp());
 
@@ -369,6 +372,59 @@ import 'package:calender_check/periodInformer.dart';
                    "Medical Problems",style: TextStyle(color: Colors.white),
                  ),
                ),
+               Divider(
+                 height: 10,
+                 color: Colors.red,
+               ),
+               RaisedButton(
+                 color: Colors. green[600],
+                 onPressed: (){
+                   Navigator.push(
+                     context,
+                     MaterialPageRoute(builder: (context) => SelectMedicine()),
+                   );
+                 },
+                 child: Text(
+                   "Select Medicine",style: TextStyle(color: Colors.white),
+                 ),
+               ),
+               RaisedButton(
+                 color: Colors. black26,
+                 onPressed: (){
+                   Navigator.push(
+                     context,
+                     MaterialPageRoute(builder: (context) => Duration()),
+                   );
+                 },
+                 child: Text(
+                   "Duration",style: TextStyle(color: Colors.white),
+                 ),
+               ),
+               RaisedButton(
+                 color: Colors. purple[800],
+                 onPressed: (){
+                   Navigator.push(
+                     context,
+                     MaterialPageRoute(builder: (context) => AddMedicine()),
+                   );
+                 },
+                 child: Text(
+                   "Add Medicine",style: TextStyle(color: Colors.white),
+                 ),
+               ),
+               RaisedButton(
+                 color: Colors. purple,
+                 onPressed: (){
+                   Navigator.push(
+                     context,
+                     MaterialPageRoute(builder: (context) => Treatment()),
+                   );
+                 },
+                 child: Text(
+                   "Treatment",style: TextStyle(color: Colors.white),
+                 ),
+               ),
+
              ],
            ),
          ),
