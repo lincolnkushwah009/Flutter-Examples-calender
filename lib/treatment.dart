@@ -12,6 +12,11 @@ class _TreatmentState extends State<Treatment> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        floatingActionButton: FloatingActionButton.extended(
+          onPressed: () {},
+          icon: Icon(Icons.add),
+          label: Text("ADD"),
+        ),
 
         appBar: AppBar(
           title: Text("Treatment"),
@@ -60,6 +65,55 @@ class _TreatmentState extends State<Treatment> {
                     )
 
                   ],
+                ) ,
+              ),
+
+              SizedBox(height: 20),
+
+              Card(
+                elevation: 5,
+                child:Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Column(
+                    children: <Widget>[
+
+                      Row(
+                        children: <Widget>[
+                          Icon(Icons.alarm),
+                          SizedBox(width: 20,),
+                          Text("Capsule"),
+                        ],
+                      ),
+                      SizedBox(height: 10,),
+
+                      Row(
+                        children: <Widget>[
+                          Text("2 times daily-08:00 and 11:00"),
+
+                          SizedBox(width: 20,),
+
+                        ],
+                      ),
+                      SizedBox(height: 10,),
+                      Row(
+                        children: <Widget>[
+                          Icon(Icons.calendar_today),
+                          SizedBox(width: 20,),
+                          Text("Until 9/6",style: TextStyle(color: Colors.black26),),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Text(""),
+                          Icon(Icons.add_alert,color: Colors.green,),
+                        ],
+                      )
+
+
+
+                    ],
+                  ),
                 ) ,
               )
 
