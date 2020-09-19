@@ -1,8 +1,10 @@
 import 'package:calender_check/Add-Medicine.dart';
 import 'package:calender_check/Food-Results.dart';
 import 'package:calender_check/Macro-Nutrients-Two.dart';
+import 'package:calender_check/SelectCard.dart';
 import 'package:calender_check/SelectMedicine.dart';
 import 'package:calender_check/addFoodDetails.dart';
+import 'package:calender_check/bloodSugarLog.dart';
 import 'package:calender_check/chat.dart';
 import 'package:calender_check/dietPersonalizer.dart';
 import 'package:calender_check/list1.dart';
@@ -422,6 +424,30 @@ import 'Duration.dart';
                  },
                  child: Text(
                    "Treatment",style: TextStyle(color: Colors.white),
+                 ),
+               ),
+               RaisedButton(
+                 color: Colors. pinkAccent,
+                 onPressed: (){
+                   Navigator.push(
+                     context,
+                     MaterialPageRoute(builder: (context) => SelectCard()),
+                   );
+                 },
+                 child: Text(
+                   "Select Card",style: TextStyle(color: Colors.white),
+                 ),
+               ),
+               RaisedButton(
+                 color: Colors. black,
+                 onPressed: (){
+                   Navigator.push(
+                     context,
+                     MaterialPageRoute(builder: (context) => BloodSugarLog()),
+                   );
+                 },
+                 child: Text(
+                   "Blood Sugar Log",style: TextStyle(color: Colors.white),
                  ),
                ),
 
