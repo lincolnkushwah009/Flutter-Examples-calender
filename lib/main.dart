@@ -1,4 +1,5 @@
 import 'package:calender_check/Add-Medicine.dart';
+import 'package:calender_check/BloodSugarLogGet.dart';
 import 'package:calender_check/Food-Results.dart';
 import 'package:calender_check/Macro-Nutrients-Two.dart';
 import 'package:calender_check/SelectCard.dart';
@@ -448,6 +449,18 @@ import 'Duration.dart';
                  },
                  child: Text(
                    "Blood Sugar Log",style: TextStyle(color: Colors.white),
+                 ),
+               ),
+               RaisedButton(
+                 color: Colors. black,
+                 onPressed: (){
+                   Navigator.push(
+                     context,
+                     MaterialPageRoute(builder: (context) => BloodSugarLogGet()),
+                   );
+                 },
+                 child: Text(
+                   "Blood Sugar Log Get",style: TextStyle(color: Colors.white),
                  ),
                ),
 
